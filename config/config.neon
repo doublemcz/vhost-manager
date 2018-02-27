@@ -1,5 +1,5 @@
 parameters:
-	vhostDir: %appDir%/../vhosts
+	vhostDir: %appDir%/../nginx
 
 extensions:
 	console: Kdyby\Console\DI\ConsoleExtension
