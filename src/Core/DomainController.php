@@ -33,7 +33,7 @@ class DomainController
 
 		$result = [];
 		/** @var \SplFileInfo $path */
-		foreach (Finder::findFiles('*.conf')->from($this->configuration['vhostDir']) as $path) {
+		foreach (Finder::findFiles('*.conf')->from($this->configuration['vhostDir'] . '/sites-enabled') as $path) {
 			$this->getDomainInfo($result, (string)$path);
 		}
 
