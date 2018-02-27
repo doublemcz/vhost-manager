@@ -1,5 +1,5 @@
 temp/*
 vendor
 .idea
-
+.DS_Store
 !.gitkeep
