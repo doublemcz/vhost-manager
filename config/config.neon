@@ -1,0 +1,14 @@
+parameters:
+	vhostDir: %appDir%/../vhosts
+
+extensions:
+	console: Kdyby\Console\DI\ConsoleExtension
+
+decorator:
+	Symfony\Component\Console\Command\Command:
+		tags: [kdyby.console.command]
+
+services:
+	- App\Core\DomainController
+	- App\Application\Configuration
+	- App\Commands\DomainListCommand
