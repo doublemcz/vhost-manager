@@ -5,7 +5,7 @@
 #### With docker
 Make an alias in .bash_aliases
 
-`alias vhost-manager="docker run -d -v path-to-nginx-dir:/application/nginx/vhosts doublemcz/vhost-manager console"`
+`alias vhost-manager="docker run -v /etc/nginx/sites-enabled/vhosts:/application/vhosts vhost-manager:latest php console"`
 
 then you can use
 
