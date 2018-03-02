@@ -1,17 +1,17 @@
 # Manager for Nginx vhost configurations
 
-### Usage
+### Installation
 
-#### With docker
-Make an alias in .bash_aliases
+```
+git clone https://github.com/doublemcz/vhost-manager.git
+cd vhost-manager
+composer install
+```
 
-`alias vhost-manager="docker run -v /etc/nginx:/application/nginx doublem/vhost-manager php console"`
+Test functionality by typing
+`bin/console ls`
 
-then you can use
-
-`vhost-manager ls`
-
-You will see similar result:
+You should see similar result:
 
 ```
 ╔════════════════╤════════╤═══════════════════════════╤═════╤════════════════════════╤═════════════════════╗

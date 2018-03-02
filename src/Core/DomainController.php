@@ -31,9 +31,15 @@ class DomainController
 			return [];
 		}
 
+		$sitesEnabled = $this->configuration['vhostDir'] . '/sites-enabled';
+		if (!is_dir($sitesEnabled)) {
+			echo "[ERROR] Dir '$sitesEnabled'' does not exist\n";
+			exit;
+		}
+
 		$result = [];
 		/** @var \SplFileInfo $path */
-		foreach (Finder::findFiles('*.conf')->from($this->configuration['vhostDir'] . '/sites-enabled') as $path) {
+		foreach (Finder::findFiles('*.conf')->from($sitesEnabled) as $path) {
 			$this->getDomainInfo($result, (string)$path);
 		}
 
