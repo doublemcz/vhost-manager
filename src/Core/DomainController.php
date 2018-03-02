@@ -104,6 +104,14 @@ class DomainController
 						$row['listen'] = implode(', ', $ports);
 
 						break;
+					case 'server_name' :
+						if (is_array($property->value)) {
+							$row[$property->name] = implode(", ", $property->value);
+						} else {
+							$row[$property->name] = $property->value;
+						}
+
+						break;
 					default:
 						$row[$property->name] = $property->value;
 

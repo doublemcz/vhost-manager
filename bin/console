@@ -15,5 +15,7 @@ if (file_exists(__DIR__ . '/../config/config.local.neon')) {
 }
 
 $container = $configurator->createContainer();
+/** @var \Kdyby\Console\Application $console */
 $console = $container->getByType(\Symfony\Component\Console\Application::class);
+$console->setDefaultCommand('ls');
 exit($console->run());
