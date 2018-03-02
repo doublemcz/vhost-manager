@@ -1,2 +1,0 @@
-parameters:
-	vhostDir: %appDir%/../nginx
